@@ -8,7 +8,15 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 find_package(Qt6 REQUIRED COMPONENTS Widgets)
 
-qt_standard_project_setup()
+if(COMMAND qt_standard_project_setup)
+    qt_standard_project_setup()
+else()
+    # Compatibility for older Qt 6 releases (for example Ubuntu package builds)
+    # where qt_standard_project_setup() is not available.
+    set(CMAKE_AUTOMOC ON)
+    set(CMAKE_AUTOUIC ON)
+    set(CMAKE_AUTORCC ON)
+endif()
 
 qt_add_executable(PurpleNavigator
     src/main.cpp

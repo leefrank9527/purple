@@ -1,0 +1,52 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug PurpleNavigator (gdb)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/PurpleNavigator",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [
+        {
+          "name": "LD_LIBRARY_PATH",
+          "value": ""
+        },
+        {
+          "name": "GIO_MODULE_DIR",
+          "value": ""
+        },
+        {
+          "name": "GTK_PATH",
+          "value": ""
+        },
+        {
+          "name": "GTK_MODULES",
+          "value": ""
+        },
+        {
+          "name": "GTK_EXE_PREFIX",
+          "value": ""
+        },
+        {
+          "name": "GTK_IM_MODULE_FILE",
+          "value": ""
+        },
+        {
+          "name": "XDG_DATA_DIRS",
+          "value": "${env:XDG_DATA_DIRS_VSCODE_SNAP_ORIG}"
+        },
+        {
+          "name": "XDG_DATA_HOME",
+          "value": "${env:XDG_DATA_HOME_VSCODE_SNAP_ORIG}"
+        }
+      ],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb",
+      "preLaunchTask": "Build PurpleNavigator"
+    }
+  ]
+}
